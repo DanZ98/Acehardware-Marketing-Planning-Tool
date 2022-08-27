@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/**********************************
+Breadcrumbs Section
+**********************************/
+.breadcrumbs {
+
+    &__ul {
+        display: flex;
+    }
+
+    &__li {
+        margin: 7px 8px;
+    }
+
+    &__slash {
+        margin-top: 8px;
+        color: $color-red-ace;
+    }
+}
+
+/**********************************
+Banner Section
+**********************************/
+.banner {
+    padding: 0;
+
+    &__container {
+        background-image: url("../images/ace_header_pattern.svg");
+        height: 100px;
+        width: 100%;
+        background-color: $color-red-ace;
+    }
+
+    &__header {
+        height: 98px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        color: #fff;
+        text-align: center;
+        padding: 0 20px;
+        font-family: $fontfamily-RobotoCondensed;
+        font-weight: 300;
+    }
+}

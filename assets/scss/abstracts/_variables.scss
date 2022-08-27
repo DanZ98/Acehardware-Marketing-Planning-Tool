@@ -1,0 +1,39 @@
+// Global Settings
+html {
+    /* Set root font size to 10px. Easier to calculate in REM units by 10 */
+    font-size: 62.5%;
+    /*Add smooth scrolling effect*/
+    scroll-behavior: smooth
+}
+
+body {
+    /* Set body font size to 16px */
+    font-size: 1.6rem;
+    font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', Arial, 'Lucida Grande', sans-serif;
+}
+
+// Font Family
+$fontfamily-RobotoCondensed: 'Roboto Condensed', 'Helvetica Neue', 'Helvetica', Arial, 'Lucida Grande', sans-serif;
+$fontfamily-Roboto: 'Roboto', 'Helvetica Neue', 'Helvetica', Arial, 'Lucida Grande', sans-serif;
+$fontfamily-RobotoSlab: 'Roboto Slab', 'Helvetica Neue', 'Helvetica', Arial, 'Lucida Grande', sans-serif;
+
+/* Font Size */
+$fontsize-21: 21px;
+$fontsize-18: 18px;
+$fontsize-16: 16px;
+$fontsize-15: 15px;
+$fontsize-14: 14px;
+
+// Colors
+$color-red-ace: #d40029;
+$color-white: #fff;
+$color-black: #000;
+$color-btn-hover: #AE0022;
+$color-md-gray: #373A3C;
+
+// Flex
+$display-flex: flex;
+
+// Effects
+$transition-effect: ease all .4s;
+

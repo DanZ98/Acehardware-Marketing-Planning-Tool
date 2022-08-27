@@ -1,0 +1,331 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+/**********************************
+Table Grid Section
+**********************************/
+#grid {
+    background-color: #f6f6f6;
+    padding: 20px 0 30px 0;
+}
+
+.table-container {
+    max-width: 980px;
+    width: 100%;
+    padding: 0 20px;
+
+    // Radio and Current Store Dropdown
+    &__radio-store {
+        margin-top: 5px;
+    }
+
+    .form-check {
+        margin-bottom: 10px;
+    }
+
+    &__btn-current-store {
+        width: 201px;
+        height: 38px;
+        font-size: 16px;
+        background-color: $color-white;
+        color: #000;
+    }
+
+    &__store {
+        color: $color-red-ace;
+    }
+
+    .dropdown {
+        padding-left: 0;
+    }
+
+    .dropdown-toggle::after {
+        margin-left: 1.255em;
+        font-size: 19px;
+        position: relative;
+        top: 2px;
+    }
+
+    li {
+        padding: 5px 0;
+    }
+
+    .dropdown-item {
+        font-size: 16px;
+        padding-right: 41px;
+    }
+
+    // Grid
+    .table-investment {
+        margin-top: 15px;
+    }
+
+    thead tr th {
+        padding: 13px 0;
+        vertical-align: middle;
+        text-align: center;
+        background-color: #707070;
+        color: $color-white;
+    }
+
+    thead tr th:nth-child(1) {
+        -webkit-border-top-left-radius: 10px;
+        -moz-border-top-left-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+
+    thead tr th:nth-child(2){
+        width: 138px;
+        text-align: center;
+        padding: 10px 10px;
+        background-color: #707070;
+        color: #fff;
+        border-left: 1px solid #fff;
+        text-transform: uppercase;
+        font-size: $fontsize-14;
+    }
+
+    thead tr th:nth-child(3){
+        background-color: #707070;
+        color: #fff;
+        border-left: 1px solid #fff;
+        border-right: 1px solid #fff;
+        width: 138px;
+        text-transform: uppercase;
+        font-size: $fontsize-14;
+        padding: 0 10px;
+    }
+
+    thead tr th:nth-child(4){ 
+        width: 280px;
+        -webkit-border-top-right-radius: 10px;
+        -moz-border-top-right-radius: 10px;
+        border-top-right-radius: 10px;
+        text-transform: uppercase;
+        font-size: $fontsize-14;
+    }
+
+    &__row-border {
+        border-bottom: 2px solid #d1d1d1;
+    }
+
+    &__btn-view, &__btn-manage {
+        width: 96px;
+        height: 28px;
+        margin: 0 20px;
+        font-size: $fontsize-14;
+        display: inline-block;
+        text-transform: capitalize;
+        @include borderRadius;
+        @include transition;
+    }
+
+    &__btn-view:nth-child(1) {
+        margin-left: 23px;
+    }
+
+    &__btn-view {
+        border: 1px solid #000;
+        color: $color-black;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 27px;
+        
+        &:hover {
+            background-color: $color-black;
+            color: $color-white;
+            cursor: pointer;
+        }
+    }
+
+    &__btn-manage {
+        border: 1px solid #d40029;
+        background-color: $color-white;
+        color: $color-red-ace;
+        
+        &:hover {
+            background-color: #AE0022;
+            color: $color-white;
+            cursor: pointer;
+        }
+    }
+
+    tbody tr th, tbody tr td {
+        padding: 11px 0;
+        border: 1px solid #d1d1d1;
+        line-height: normal;
+        vertical-align: middle;
+        background-color: #fff;
+    }
+
+    tbody tr th {
+        padding-left: 24px;
+        padding-right: 10px;
+        background-color: $color-white;
+        text-transform: capitalize;
+        font-weight: 500;
+        
+    }
+
+    tbody tr:nth-child(n+2):nth-child(-n+14) th {
+        padding-left: 8px;
+    }
+
+    tbody tr td:nth-child(2), tbody tr td:nth-child(3) {
+        text-align: right;
+        padding-right: 14px;
+        background-color: $color-white;
+    }
+
+    tbody tr:not(:first-child) td:nth-child(4) {
+        text-align: center;
+        background-color: $color-white;
+    }
+
+    &__right-chevron {
+        margin-right: 11px;
+        font-size: $fontsize-18;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__td {
+        padding: 0 !important;
+    }
+
+    &__inner-table {
+        width: 80%;
+        margin-left: auto;
+        margin-right: 1px;
+        
+        thead tr th {
+            background-color: initial;
+            color: $color-black;
+            border: none;
+        }
+
+        thead tr th:nth-child(2), thead tr th:nth-child(3) {
+            background-color: initial;
+            color: $color-black;
+            padding-left: 0;
+            border: none;
+        }
+        
+        thead tr th:nth-child(4) {
+            width: 262px;
+            text-align: left;
+        }
+
+        thead tr th:nth-child(4) span {
+            font-size: 10px;
+            text-transform: initial;
+            color: $color-red-ace;
+            font-style: italic;
+            display: inline-block;
+        }
+
+        tbody tr th {
+            padding-left: 24px !important;
+        }
+
+        tbody tr td:nth-child(4) {
+            border-right: none;
+            text-align: left !important;
+            padding-left: 24px;
+        }
+    }
+
+    &__inner-table-container {
+        background-color: #eee;
+        height: 288px;
+        overflow: auto;
+        display: none;
+    }
+
+    // Styling Scrollbar
+    &__inner-table-container::-webkit-scrollbar {
+        width: 17px;
+    }
+
+    &__inner-table-container::-webkit-scrollbar-track {
+        background: $color-red-ace;  
+    }
+
+    &__inner-table-container::-webkit-scrollbar-thumb{
+        background-color: $color-black;    /* color of the scroll thumb */
+        border-radius: 20px;       /* roundness of the scroll thumb */
+        border: 3px solid #000;  /* creates padding around scroll thumb */
+    }
+    // End Styling Scrollbar
+
+    .arrow-right-rotate {
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        transform: rotate(90deg);
+
+        -moz-transition: all .3s linear;
+        -webkit-transition: all .3s linear;
+        transition: all .3s linear;
+    }
+
+    &__sub-total, &__sub-total-value {
+        background-color: #f6f6f6 !important;
+        border: none !important;
+    }
+
+    &__sub-total, .table-container__total {
+        text-align: right;
+        padding-right: 25px !important;
+        text-transform: uppercase !important;
+    }
+
+    &__reimbursement {
+        color: $color-red-ace;
+    }
+
+    &__reimbursement-btn-container {
+        text-align: left !important;
+    }
+
+    &__btn-manage--reimbursement {
+        padding-top: 5px;
+        text-align: center;
+    }
+
+    &__total, &__total-value {
+        background-color: #515151 !important;
+        color: #fff
+    }
+}
+
+/**********************************
+Pie Chart Section
+**********************************/
+#chartdiv {
+    width: 520px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+
+// Media Queries
+@media only screen and (max-width: 878px){
+    .table-container__inner-table {
+        width:100%;
+    }
+}
+
+@media only screen and (max-width: 745px){
+    .table-container__btn-view:nth-child(1) {
+        position: relative;
+        top: 5px;
+        display: block;
+        margin: 0 auto 0 auto;
+    }
+
+    .table-container__reimbursement-btn-container {
+        text-align: center !important;
+    }
+}
