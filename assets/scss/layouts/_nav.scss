@@ -77,9 +77,14 @@ Horizontal Bar Navigation Section
         }
 
         .nav-link {
-            padding: 18px !important;
+            padding: 18px;
         }
     }
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
 }
 
 /**********************************
@@ -309,6 +314,10 @@ Hamburger Mobile Menu Codepen Section
 Mobile Section
 **********************************/
 @media only screen and (max-width: 1200px) {
+    .marketing-link {
+        padding: 25px 18px !important;
+    }
+
     .mega-menu {
         position: absolute;
         top: 68px !important;
