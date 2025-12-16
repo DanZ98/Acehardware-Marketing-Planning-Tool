@@ -7,16 +7,6 @@ $('.chevron-toggle').click(function(){
     $(this).toggleClass('arrow-right-rotate');
 });
 
-$('.nav-link').click(function(){
-    $(this).next().slideToggle();
-
-    if($('.mega-menu:visible').length > 1) {
-        $('.mega-menu:visible').hide();
-        $(this).next().show();
-    }
-});
-
-
 // Pie Chart
 am5.ready(function() {
 
